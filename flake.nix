@@ -27,7 +27,10 @@
         # The usual flake attributes can be defined here, including system-
         # agnostic ones like nixosModule and system-enumerating ones, although
         # those are more easily expressed in perSystem.
-        template.default = ./flakes/nixpkgs-haskell;
+        template.default = {
+          path = ./flakes/nixpkgs-haskell;
+          description = "nixpkgs-haskell";
+        };
       };
     };
 }
