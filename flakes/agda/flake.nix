@@ -25,7 +25,7 @@
             (agda.withPackages (p: [p.standard-library])) 
           ];
           shellHook = ''
-            export PS1='\[\e[m35\]dev >\[\e[m0\]'
+            export PS1='\[\e[35m\]dev > \[\e[0m\]'
           '';
         };
         # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
