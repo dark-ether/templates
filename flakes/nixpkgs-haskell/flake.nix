@@ -25,7 +25,7 @@
         # Per-system attributes can be defined here. The self' and inputs'
         # module parameters provide easy access to attributes of the same
         # system.
-        haskellProjects.main = {
+        haskellProjects.default = {
           packages.PLACEHOLDER.root = ./.;
           devShell = {
             enable = true;
@@ -35,9 +35,9 @@
         # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
         treefmt.programs = {
           cabal-fmt.enable = true;
-          hlint.enable = true;
+          ormolu.enable = true;
+          ormolu.package = pkgs.haskellPackages.fourmolu;
         };
-        devShells.default = config.devShells.main;
       };
       flake = {
         # The usual flake attributes can be defined here, including system-
