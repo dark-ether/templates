@@ -35,6 +35,10 @@
           path = ./flakes/agda;
           description = "agda template for starting out";
         };
+        templates.idris = {
+          path = ./flakes/idris;
+          description = "idris2 template";
+        };
       };
     };
 }
